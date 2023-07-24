@@ -315,7 +315,7 @@ call(delay, 1000)        // => { CALL: {fn: delay, args: [1000]}}
 import test from 'tape';
 
 import { put, call } from 'redux-saga/effects'
-import { delay } from 'redux-saga'
+import { delay } from 'redux-saga' // running delay function cause a error:delay is not function,it should import delay from 'redux-saga/effect' instead of redux-saga
 import { incrementAsync } from './sagas'
 
 test('incrementAsync Saga test', (assert) => {
